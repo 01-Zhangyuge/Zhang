@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>案例练习：注册</title>
+<link rel="stylesheet" href="libs/particles/css/style.css" />
+<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+<div id="main">
+   <div class="logo">
+      <img src="img/logo.png" />
+      <h2>买衣服，我只认淘衣网</h2>
+   </div>
+   <nav class="nav">
+      <a href="#" id="on">注册</a>
+      <a href="login.html" id="off">登录</a>
+   </nav>
+   <form method="post" action="">
+      <ul class="group">
+          <li><input type="text" placeholder="姓名" id="name" /></li>
+          <li><input type="text" placeholder="手机号（仅支持中国大陆）" id="mobile" /></li>
+          <li><input type="password" placeholder="密码（不少于6位）" id="pw" /></li>
+      </ul>
+      <button type="submit" class="submit_btn">注册淘衣</button>
+      <span class="tip">点击「注册」按钮，即代表你同意<a href="#">《淘衣协议》</a></span>
+   </form>
+   <div class="submit_btn download_btn">下载淘衣APP</div>
+   <div class="QRcode"><img src="img/QRcode.png" /></div>
+</div>
+<div id="footer">
+   <span>&copy;2017知乎 · 知乎圆 · 发现 · 移动使用<br />
+·机构账号登录 · 工作来知乎 ·</span><br /> 
+   <div class="copyright"><span>京ICP证1107京公网安备11010802010035号<br />
+·出版物经营许可证</span></div>
+</div>
+<div id="particles-js"></div>
+<script src="libs/jquery-1.12.4/jquery.min.js"></script>
+<script src="libs/particles/particles.min.js"></script>
+<script src="libs/particles/js/app.js"></script>
+<script src="libs/particles/demo.js"></script>
+<script type="text/javascript">
+   $(".download_btn").click(function(){
+	   if($(".QRcode").css("display")=="none"){
+		   $(".QRcode").show();
+		   $(".download_btn").text("关闭二维码");
+		   }else{
+			  $(".QRcode").hide();
+			  $(".download_btn").text("下载知乎App");
+			   }
+	   })
+</script>
+</body>
+</html>
